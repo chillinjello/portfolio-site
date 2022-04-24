@@ -1,0 +1,23 @@
+.header {
+    padding: -10px -10px;
+    background: #0000;
+    color: #f1f1f1;
+}
+
+.content {
+    padding: 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 102px;
+}
+
+button {
+    outline : 0 none;
+}
