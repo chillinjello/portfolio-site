@@ -14,27 +14,37 @@ const HeaderRouter = (props) => {
                 <row>
                     <div className="6 col"/>
                     <div className="1 col">
-                        <div style={{ background: "#555", padding: "10px 10px 10px 10px", borderRadius: "0 0 15px 15px"}}>
+                        <div className="home-button">
                             <a href="/">Home</a>
                         </div>
                     </div>
                     <div className="1 col">
-                        <div style={{ background: "#555", padding: "10px 10px 10px 10px", borderRadius: "0 0 15px 15px"}}>
-                            <a onClick={() => navigate(-1)}>Back</a>
+                        <div className="back-button">
+                            <a onClick={() => {
+                                navigate(-1);
+                                return false;
+                            }}
+                                style={{color: "#ff9955"}}>
+                                Back
+                            </a>
                         </div>
                     </div>
                     <div className="6 col"/>
                </row>
            </div>
             <Routes>
-                <Route path="/my-games" element={<MyGames />}></Route>
+                {/* My games */}
+                <Route path="/my-games" exact element={<MyGames />}></Route>
 
-                <Route path="/music" element={<MusicHome />}></Route>
+                {/* Music writing pages */}
+                <Route path="/music" exact element={<MusicHome />}></Route>
 
-                <Route path="/books" element={<BooksHome />}></Route>
+                {/* Book writing pages */}
+                <Route path="/books" exact element={<BooksHome />}></Route>
 
-                <Route path="/games" element={<GamesHome />}></Route>
-                <Route path="/games/test" element={<TestDoc/>}/>
+                {/* Game writing pages */}
+                <Route path="/games" exact element={<GamesHome />}></Route>
+                <Route path="/games/test" element={<TestDoc/>}></Route>
             </Routes>
         </div>
     );

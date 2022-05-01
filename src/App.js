@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
+import './index.css';
 import HomePage from "./views/HomePage";
 import HeaderRouter from './views/components/HeaderRouter';
 
@@ -8,7 +8,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" exact={true} element={<HomePage />}/>
-        <Route path="/*" exact={true} element={<HeaderRouter/>}/>
+        <Route path="/*" element={<HeaderRouter/>}/>
+        {/* <Route path="/games-test" element={<HeaderRouter/>}/> */}
       </Routes>
     </BrowserRouter>
   );
