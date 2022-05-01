@@ -2,7 +2,60 @@ import React from "react";
 import backgroundPic from "./background.jpg";
 
 const GamesHome = (props) => {
-    const gamesPath = "/games/"
+    const booksPath = "/books/"
+
+    // Creates urls with "/books/[author]-[title]"" format
+    // spaces are removed for "-"'s
+    const createLink = (author, title, date) => {
+        const modifiedAuthor = author.replaceAll(" ", "-").toLowerCase();
+        const modifiedTitle = title.replaceAll(" ", "-").toLowerCase();
+        if (date == undefined) {
+            return <li><a href={booksPath + modifiedAuthor + "-" + modifiedTitle}>{title}</a></li>
+        } else {
+            return <li><a href={booksPath + modifiedAuthor + "-" + modifiedTitle}>{title} ({date})</a></li>
+        }
+    }
+
+    const authorsAndBooks = () => {
+        return (
+            <div>
+                <h5 style={{textAlign: "center"}}>Articles:</h5>
+                <p>Pedro Calderon de la Barca</p>
+                <ul>
+                    {createLink("Calderon","Life Is A Dream", "1636")}
+                </ul>
+                <p>Don Dilillo</p>
+                <ul>
+                    {createLink("Dilillo","White Noise", "1985")}
+                </ul>
+                <p>Herodotus</p>
+                <ul>
+                    {createLink("Herodotus","Histories", "430BC")}
+                </ul>
+                <p>Tao Lin</p>
+                <ul>
+                    {createLink("Lin","Taipei", "2013")}
+                </ul>
+                <p>Gabriel Garcia Marquez</p>
+                <ul>
+                    {createLink("Marquez","100 Years Of Solitude", "1967")}
+                </ul>
+                <p>Cormac McCarthy</p>
+                <ul>
+                    {createLink("McCarthy","Blood Meridian", "1985")}
+                </ul>
+                <p>Philip Roth</p>
+                <ul>
+                    {createLink("Roth","American Pastoral", "1997")}
+                </ul>
+                <p>Thomas Pynchon</p>
+                <ul>
+                    {createLink("Pynchon","The Crying Of Lot 49", "1966")}
+                    {createLink("Pynchon","Mason & Dixon", "1997")}
+                </ul>
+            </div>
+        );
+    }
 
     return (
         <div style={{margin: "0px", color: "white", paddingTop: "150px", height: "100vh", backgroundImage: `url(${backgroundPic})`, backgroundAttachment: "fixed", backgroundPosition: "center", backgroundSize: "cover"}}>
@@ -14,8 +67,7 @@ const GamesHome = (props) => {
                 <div className="row">
                     <div className="2 col"/>
                     <div className="3 col">
-                        <h5 style={{textAlign: "center"}}>Articles:</h5>
-                        <h6><a href={gamesPath + "test"}>test</a></h6>
+                        {authorsAndBooks()}
                     </div>
                     <div className="2 col"/>
                 </div>

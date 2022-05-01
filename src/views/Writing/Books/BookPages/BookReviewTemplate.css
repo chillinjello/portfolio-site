@@ -1,0 +1,9 @@
+br {
+    content: "";
+    margin: 1em;
+    display: block;
+  }
+
+p.a {
+    word-break: break-all;
+  }

@@ -15,7 +15,7 @@ const GamesHome = (props) => {
                     <div className="2 col"/>
                     <div className="3 col">
                         <h5 style={{textAlign: "center"}}>Articles:</h5>
-                        <h6><a href={gamesPath + "test"}>test</a></h6>
+                        {/* <h6><a href={gamesPath + "test"}>test</a></h6> */}
                     </div>
                     <div className="2 col"/>
                 </div>
