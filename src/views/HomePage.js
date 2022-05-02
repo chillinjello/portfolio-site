@@ -11,7 +11,7 @@ class HomePage extends React.Component {
     render = () => {
         return (
             <div style={{margin: "0px", color: "white", paddingTop: "150px", height: "100vh", backgroundImage: `url(${backgroundPic})`, backgroundAttachment: "fixed", backgroundPosition: "center", backgroundSize: "cover"}}>
-                <div className="c" style={{backgroundColor: "rgba(0,0,0,.6)", maxWidth:"50em"}}>
+                <div className="c" style={{backgroundColor: "rgba(0,0,0,.7)", maxWidth:"50em"}}>
                     <div style={{textAlign: "center"}}>
                         <div className="row">
                             <h1>Joel Davidson</h1>
@@ -42,7 +42,7 @@ class HomePage extends React.Component {
                         </div>
                     </div>
                     <hr style={{borderWidth: "0.05px", borderColor: "white", marginTop:"15px"}}/>
-                    <div style={{textAlign: "center"}}><a href="joelwdavidson@gmail.com">joelwdavidson@gmail.com</a></div>
+                    <div style={{textAlign: "center", color: "#ff9955"}}>joelwdavidson@gmail.com</div>
               </div>
             </div>
         )

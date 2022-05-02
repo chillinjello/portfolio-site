@@ -40,7 +40,7 @@ class HomePage extends React.Component {
     render = () => {
         return (
             <div style={{margin: "0px", color: "white", paddingTop: "150px", backgroundImage: `url(${backgroundPic})`, backgroundAttachment: "fixed", backgroundPosition: "center", backgroundSize: "cover"}}>
-                <div className="c" style={{backgroundColor: "rgba(0,0,0,.3)", maxWidth:"50em"}}>
+                <div className="c" style={{backgroundColor: "rgba(0,0,0,.7)", maxWidth:"50em"}}>
                     <div className="row">
                         {/* <div className="3 col">
                             <br/>
@@ -50,7 +50,7 @@ class HomePage extends React.Component {
                             <br/>
                             <h4>Joel Davidson's Games</h4>
                             <p>On this page I've got some of the game projects I've made over the year. Most aren't made to be played by anyone beyond friends and family, but they're all online and free.</p>
-                            <p>email: <a href="joelwdavidson@gmail.com">joelwdavidson@gmail.com</a></p>
+                            <p style={{color: "#ff9955"}}>email: joelwdavidson@gmail.com</p>
                         </div>
                     </div>
                     <EntryWrapper gameImage={moleGame}>

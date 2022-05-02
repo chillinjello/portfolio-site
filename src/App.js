@@ -1,17 +1,17 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 import './index.css';
 import HomePage from "./views/HomePage";
 import HeaderRouter from './views/components/HeaderRouter';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" exact={true} element={<HomePage />}/>
         <Route path="/*" element={<HeaderRouter/>}/>
         {/* <Route path="/games-test" element={<HeaderRouter/>}/> */}
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 export default App;
