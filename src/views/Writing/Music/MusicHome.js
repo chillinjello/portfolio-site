@@ -1,5 +1,6 @@
 import React from "react";
 import backgroundPic from "./background.jpg";
+import { Link, NavLink } from "react-router-dom";
 
 const MusicHome = (props) => {
     const musicPath = "/music/"
@@ -15,7 +16,7 @@ const MusicHome = (props) => {
                     <div className="2 col"/>
                     <div className="3 col">
                         <h5 style={{textAlign: "center"}}>Articles:</h5>
-                        <h6><a href={musicPath + "Top50MusicSpring2022"}>50 Musical Pillars - Spring 2022</a></h6>
+                        <h6><NavLink as={Link} to={musicPath + "Top50MusicSpring2022"}>50 Musical Pillars - Spring 2022</NavLink></h6>
                     </div>
                     <div className="2 col"/>
                 </div>

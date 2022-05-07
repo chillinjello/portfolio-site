@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./GameList.css";
 import profilePic from "../../images/child-picture.jpg";
 import backgroundPic from "../../images/game-background.jpg";
@@ -12,6 +13,7 @@ import robberRups from "../../images/game-images/robber-rups.png";
 import testYourSkills from "../../images/game-images/test-your-skills.png";
 import westernRPG from "../../images/game-images/western-rpg.png";
 import moleGame from "../../images/game-images/mole-game.jpg";
+import aVisitToFriends from "../../images/game-images/AVisitToFriends.jpg";
 
 class EntryWrapper extends React.Component {
     render = () => {
@@ -20,9 +22,9 @@ class EntryWrapper extends React.Component {
                 <div className="row">
                     <div className="4 col">
                         <br/>
-                        <div><img src={this.props.gameImage} width="200" alt="error loading pic"/></div>
+                        <img src={this.props.gameImage} width="200" align={"top"} alt="error loading pic"/>
                     </div>
-                    <div className="8 col">
+                    <div className="8 col" style={{paddingTop:"0px", marginTop:"0px"}}>
                         <br/>
                         {this.props.children}
                     </div>
@@ -53,6 +55,11 @@ class HomePage extends React.Component {
                             <p style={{color: "#ff9955"}}>email: joelwdavidson@gmail.com</p>
                         </div>
                     </div>
+                    <EntryWrapper gameImage={aVisitToFriends}>
+                        <h5><a href="https://store.steampowered.com/app/1766550/A_Visit_to_Friends/">A Visit to Friends</a></h5>
+                        <p>A Visit to Friends is a collection of four dioramas, each with their own themes, characters and puzzles to solve. Catch chickens, put in a day's work, and explore your own subconscious through heterodox methods. All this and more is in store when you take A Visit to Friends.</p>
+                        <i>windows, mac, linux</i>
+                    </EntryWrapper>
                     <EntryWrapper gameImage={moleGame}>
                         <h5><a href="https://store.steampowered.com/app/1158410/Mole_Game/">Mole Game</a></h5>
                         <p>A grid based puzzle game about being a mole and all that comes with that.</p>

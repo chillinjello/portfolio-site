@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useNavigate, Link, NavLink } from 'react-router-dom';
 import "./HeaderRouter.css"
 import MyGames from "./../GamePortfolio/GameList";
 import BooksHome from "./../Writing/Books/BooksHome.js";
@@ -15,6 +15,7 @@ import PhilipRoth_AmericanPastoral from '../Writing/Books/BookPages/Authors/Phil
 import Herodotus_Histories from '../Writing/Books/BookPages/Authors/Herodotus/Histories';
 import Pynchon_CryingOfLot49 from '../Writing/Books/BookPages/Authors/Thomas Pynchon/CryingOfLot49';
 import Pynchon_MasonAndDixon from '../Writing/Books/BookPages/Authors/Thomas Pynchon/MasonAndDixon';
+
 const HeaderRouter = (props) => {
     const navigate = useNavigate();
     return (
@@ -24,7 +25,7 @@ const HeaderRouter = (props) => {
                     <div className="6 col"/>
                     <div className="1 col">
                         <div className="home-button">
-                            <a href="/">Home</a>
+                            <NavLink as={Link} to="/">Home</NavLink>
                         </div>
                     </div>
                     <div className="1 col">

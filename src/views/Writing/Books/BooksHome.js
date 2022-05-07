@@ -1,5 +1,6 @@
 import React from "react";
 import backgroundPic from "./background.jpg";
+import { Link, NavLink } from "react-router-dom";
 
 const GamesHome = (props) => {
     const booksPath = "/books/"
@@ -10,9 +11,9 @@ const GamesHome = (props) => {
         const modifiedAuthor = author.replaceAll(" ", "-").toLowerCase();
         const modifiedTitle = title.replaceAll(" ", "-").toLowerCase();
         if (date == undefined) {
-            return <li><a href={booksPath + modifiedAuthor + "-" + modifiedTitle}>{title}</a></li>
+            return <li><NavLink as={Link} to={booksPath + modifiedAuthor + "-" + modifiedTitle}>{title}</NavLink></li>
         } else {
-            return <li><a href={booksPath + modifiedAuthor + "-" + modifiedTitle}>{title} ({date})</a></li>
+            return <li><NavLink as={Link} to={booksPath + modifiedAuthor + "-" + modifiedTitle}>{title} ({date})</NavLink></li>
         }
     }
 
