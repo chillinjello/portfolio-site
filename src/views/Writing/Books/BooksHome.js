@@ -33,6 +33,10 @@ const GamesHome = (props) => {
                 <ul>
                     {createLink("Herodotus","Histories", "430BC")}
                 </ul>
+                <p>Homer</p>
+                <ul>
+                    {createLink("Homer", "Iliad", "7XXBC")}
+                </ul>
                 <p>Tao Lin</p>
                 <ul>
                     {createLink("Lin","Taipei", "2013")}
@@ -40,6 +44,7 @@ const GamesHome = (props) => {
                 <p>Gabriel Garcia Marquez</p>
                 <ul>
                     {createLink("Marquez","100 Years Of Solitude", "1967")}
+                    {createLink("Marquez","Love in the Time of Cholera", "1985")}
                 </ul>
                 <p>Cormac McCarthy</p>
                 <ul>
@@ -53,6 +58,10 @@ const GamesHome = (props) => {
                 <ul>
                     {createLink("Pynchon","The Crying Of Lot 49", "1966")}
                     {createLink("Pynchon","Mason & Dixon", "1997")}
+                </ul>
+                <p>John Williams</p>
+                <ul>
+                    {createLink("Williams","Stoner", "1965")}
                 </ul>
             </div>
         );
